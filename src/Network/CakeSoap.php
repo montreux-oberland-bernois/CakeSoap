@@ -51,6 +51,8 @@ class CakeSoap
      */
     public $connected = false;
 
+    private $debug;
+
     /**
      * Default configuration
      *
