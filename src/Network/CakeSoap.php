@@ -17,7 +17,7 @@ namespace CakeSoap\Network;
 
 use CakeSoap\Network\SoapClient;
 use Cake\Core\Configure;
-use Cake\Core\Exception\Exception;
+use Cake\Core\Exception\CakeException;
 use Cake\Core\InstanceConfigTrait;
 use Cake\Log\LogTrait;
 use SoapFault;
@@ -264,6 +264,6 @@ class CakeSoap
                 $this->log($this->client->__getLastRequest());
             }
         }
-        throw new Exception($error);
+        throw new CakeException($error);
     }
 }
